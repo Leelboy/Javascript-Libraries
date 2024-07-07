@@ -1,19 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #222;
     color: white;
     padding: 20px 0;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
 .glide {
     margin: 20px auto;
-    max-width: 100%;
+    max-width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .glide__slide img {
@@ -25,25 +35,54 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin: 20px auto;
+    max-width: 90%;
+}
+
+.gallery a {
+    display: block;
+    position: relative;
 }
 
 .gallery img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .address-section {
     margin: 20px auto;
-    max-width: 100%;
-    padding: 0 10px;
+    max-width: 90%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.address-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#address-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 /* Media Queries for larger screens */
 @media (min-width: 600px) {
     .gallery img {
-        width: calc(50% - 10px);
+        width: calc(50% - 15px);
     }
 
     .address-section {
@@ -53,7 +92,7 @@ header {
 
 @media (min-width: 900px) {
     .gallery img {
-        width: calc(33.333% - 10px);
+        width: calc(33.333% - 15px);
     }
 
     .address-section {
